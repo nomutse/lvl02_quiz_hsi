@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class HalamanAwal extends StatelessWidget {
   const HalamanAwal({super.key});
   static const nameRoute = '/halamanawal';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -259,39 +260,6 @@ class HalamanAwal extends StatelessWidget {
             ),
           ),
         ]),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage('assets/icons/home.png'),
-              color: Color(0XFF757575),
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage('assets/icons/topi_wisuda.png'),
-              color: Color(0XFF757575),
-            ),
-            label: 'Akademik',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage('assets/icons/kertas.png'),
-              color: Color(0XFF757575),
-            ),
-            label: 'Reguler',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(
-              AssetImage('assets/icons/profile.png'),
-              color: Color(0XFF757575),
-            ),
-            label: 'Profil',
-          ),
-        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lvl02_quiz_hsi/pages/bottom_nav.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_dua.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
@@ -17,13 +18,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color: Color(0XFFf8f8f8),
       debugShowCheckedModeBanner: false,
-      home: const HalamanAwal(),
-      initialRoute: HalamanAwal.nameRoute,
+      home: const BottomNavigationExample(),
+      initialRoute: BottomNavigationExample.nameRoute,
       routes: {
         HalamanAwal.nameRoute: (context) => const HalamanAwal(),
         HalamanDua.nameRoute: (context) => const HalamanDua(),
         HalamanTiga.nameRoute: (context) => const HalamanTiga(),
         HalamanEmpat.nameRoute: (context) => const HalamanEmpat(),
+        BottomNavigationExample.nameRoute: (context) =>
+            BottomNavigationExample(),
       },
     );
   }
