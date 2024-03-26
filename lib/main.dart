@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      color: Color(0XFFf8f8f8),
+      color: const Color(0XFFf8f8f8),
       debugShowCheckedModeBanner: false,
-      home: const BottomNavigationExample(),
+      home: HalamanEmpat(),
       initialRoute: BottomNavigationExample.nameRoute,
       routes: {
         HalamanAwal.nameRoute: (context) => const HalamanAwal(),
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         HalamanTiga.nameRoute: (context) => const HalamanTiga(),
         HalamanEmpat.nameRoute: (context) => const HalamanEmpat(),
         BottomNavigationExample.nameRoute: (context) =>
-            BottomNavigationExample(),
+            const BottomNavigationExample(),
       },
     );
   }

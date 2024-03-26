@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:lvl02_quiz_hsi/pages/halaman_dua.dart';
+import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
+import 'package:lvl02_quiz_hsi/pages/carousel.dart';
 
 class HalamanAwal extends StatelessWidget {
   const HalamanAwal({super.key});
@@ -76,6 +80,11 @@ class HalamanAwal extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
+          Container(
+            height: 300,
+            width: 300,
+            child: CarouselWithIndicatorDemo(),
+          ),
           const Text(
             'Evaluasi',
             style: TextStyle(
@@ -207,48 +216,72 @@ class HalamanAwal extends StatelessWidget {
 
                     SizedBox(height: 10),
                     Container(
-                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                      decoration: BoxDecoration(
-                          color: Color(0Xfff8f8f8),
-                          borderRadius: BorderRadius.circular(7),
-                          border: Border.all(color: Color(0XFF8d99b7))),
+                      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                      //decoration: BoxDecoration(
+                      //color: Color(0Xfff8f8f8),
+                      //borderRadius: BorderRadius.circular(7),
+                      //border: Border.all(color: Color(0XFF8d99b7))),
                       child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset('assets/icons/panah-kanan.png',
-                                width: 15,
-                                height: 15,
-                                color: Color(0XFF213974)),
-                            SizedBox(width: 7),
-                            Text(
-                              'Dengarkan Audio',
-                              style: TextStyle(
-                                  color: Color(0XFF586a97),
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                            side: BorderSide(color: Color(0XFF213974)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(HalamanDua.nameRoute);
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset('assets/icons/panah-kanan.png',
+                                  width: 15,
+                                  height: 15,
+                                  color: Color(0XFF213974)),
+                              SizedBox(width: 7),
+                              Text(
+                                'Dengarkan Audio',
+                                style: TextStyle(
+                                    color: Color(0XFF586a97),
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
 
                     SizedBox(height: 10),
                     Container(
-                      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-                      decoration: BoxDecoration(
-                          color: Color(0XFFf8f8f8),
-                          borderRadius: BorderRadius.circular(7),
-                          border: Border.all(color: Color(0XFF8d99b7))),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Lembar Evaluasi',
-                            style: TextStyle(
-                                color: Color(0XFF586a97),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                      //decoration: BoxDecoration(
+                      //color: Color(0XFFf8f8f8),
+                      //borderRadius: BorderRadius.circular(7),
+                      //border: Border.all(color: Color(0XFF8d99b7))),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.white,
+                          side: BorderSide(color: Color(0XFF213974)),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10)),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(HalamanTiga.nameRoute);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Lembar Evaluasi',
+                              style: TextStyle(
+                                  color: Color(0XFF586a97),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
 
