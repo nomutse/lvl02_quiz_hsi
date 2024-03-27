@@ -791,11 +791,16 @@ class HalamanEmpat extends StatelessWidget {
                     ),
                   ],
                 ),
-                Image.asset(
-                  'assets/icons/panah_garis.png',
-                  width: 15,
-                  height: 15,
-                  color: Color.fromARGB(255, 2, 54, 158),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
+                  },
+                  child: Image.asset(
+                    'assets/icons/panah_garis.png',
+                    width: 15,
+                    height: 15,
+                    color: Color.fromARGB(255, 2, 54, 158),
+                  ),
                 ),
               ],
             ),
@@ -836,11 +841,16 @@ class HalamanEmpat extends StatelessWidget {
                     ),
                   ],
                 ),
-                Image.asset(
-                  'assets/icons/panah_garis.png',
-                  width: 15,
-                  height: 15,
-                  color: Color.fromARGB(255, 2, 54, 158),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
+                  },
+                  child: Image.asset(
+                    'assets/icons/panah_garis.png',
+                    width: 15,
+                    height: 15,
+                    color: Color.fromARGB(255, 2, 54, 158),
+                  ),
                 ),
               ],
             ),
@@ -881,11 +891,16 @@ class HalamanEmpat extends StatelessWidget {
                     ),
                   ],
                 ),
-                Image.asset(
-                  'assets/icons/panah_garis.png',
-                  width: 15,
-                  height: 15,
-                  color: Color.fromARGB(255, 2, 54, 158),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
+                  },
+                  child: Image.asset(
+                    'assets/icons/panah_garis.png',
+                    width: 15,
+                    height: 15,
+                    color: Color.fromARGB(255, 2, 54, 158),
+                  ),
                 ),
               ],
             ),
