@@ -8,6 +8,7 @@ class BottomNavigationExample extends StatefulWidget {
   static const nameRoute = '/bottom_nav';
   const BottomNavigationExample({Key? key}) : super(key: key);
 
+  @override
   _BottomNavigationExampleState createState() =>
       _BottomNavigationExampleState();
 }
@@ -15,11 +16,11 @@ class BottomNavigationExample extends StatefulWidget {
 class _BottomNavigationExampleState extends State {
   int _selectedTab = 0;
 
-  List _pages = [
-    HalamanAwal(),
-    HalamanDua(),
-    HalamanTiga(),
-    HalamanEmpat(),
+  final List _pages = [
+    const HalamanAwal(),
+    const HalamanDua(),
+    const HalamanTiga(),
+    const HalamanEmpat(),
   ];
 
   _changeTab(int index) {
@@ -37,8 +38,8 @@ class _BottomNavigationExampleState extends State {
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedTab,
         onTap: (index) => _changeTab(index),
-        selectedItemColor: Color(0XFF243875),
-        unselectedItemColor: Color(0XFF757575),
+        selectedItemColor: const Color(0XFF243875),
+        unselectedItemColor: const Color(0XFF757575),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: ImageIcon(

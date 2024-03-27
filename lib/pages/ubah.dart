@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
 
-class HalamanDua extends StatelessWidget {
-  const HalamanDua({super.key});
-  static const nameRoute = '/halamandua';
+// ignore: camel_case_types
+class ubah extends StatelessWidget {
+  const ubah({super.key});
+  static const nameRoute = '/ubah';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Akademik',
+          'Ubah Page Profile',
           style: TextStyle(
             fontFamily: 'PlusJakartaSans.bold',
             fontSize: 20,
@@ -25,7 +26,7 @@ class HalamanDua extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'AKADEMIK',
+              'Ubah Page Profile',
               style: TextStyle(
                 fontFamily: 'PlusJakartaSans',
                 fontSize: 40,
@@ -33,15 +34,15 @@ class HalamanDua extends StatelessWidget {
               ),
             ),
             const Text(
-              '* Dengarkan Audio',
+              '* Ubah dari page Profile\n* Unduh \n* Pesan Syahadah\n* Hubungi\n* Info Lainnya\n* Ganti Password\n* Bantuan\n* Kebijakan Privasi\n* Keluar',
               style: TextStyle(
                 fontFamily: 'PlusJakartaSans',
-                fontSize: 20,
+                fontSize: 15,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Image.asset(
-              'assets/icons/topi_wisuda.png',
+              'assets/icons/profil_page.png',
               width: 60,
               height: 60,
             ),

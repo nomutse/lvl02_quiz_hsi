@@ -1,7 +1,9 @@
-// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
+import 'package:lvl02_quiz_hsi/pages/ubah.dart';
+import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
 
 class HalamanEmpat extends StatelessWidget {
   const HalamanEmpat({super.key});
@@ -85,7 +87,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     //width: 50,
@@ -322,7 +324,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 2, horizontal: 7),
@@ -381,7 +383,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
@@ -496,7 +498,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
@@ -584,7 +586,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
@@ -672,7 +674,7 @@ class HalamanEmpat extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
                   },
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
@@ -739,11 +741,16 @@ class HalamanEmpat extends StatelessWidget {
                     ),
                   ],
                 ),
-                Image.asset(
-                  'assets/icons/panah_garis.png',
-                  width: 15,
-                  height: 15,
-                  color: Color.fromARGB(255, 2, 54, 158),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed(ubah.nameRoute);
+                  },
+                  child: Image.asset(
+                    'assets/icons/panah_garis.png',
+                    width: 15,
+                    height: 15,
+                    color: Color.fromARGB(255, 2, 54, 158),
+                  ),
                 ),
               ],
             ),
@@ -895,7 +902,7 @@ class HalamanEmpat extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10)),
               ),
               onPressed: () {
-                Navigator.of(context).pushNamed(HalamanTiga.nameRoute);
+                Navigator.of(context).pushNamed(ubah.nameRoute);
               },
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

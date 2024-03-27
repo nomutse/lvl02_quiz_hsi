@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:lvl02_quiz_hsi/pages/carousel.dart';
 
 class CarouselWithIndicatorDemo extends StatefulWidget {
   @override
@@ -13,6 +12,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
   int _current = 0;
   final CarouselController _controller = CarouselController();
   final List<Widget> myData = [
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -21,6 +21,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -29,6 +30,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -37,6 +39,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -45,6 +48,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -53,6 +57,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -61,6 +66,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -69,6 +75,7 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
         scale: 0.2,
       ),
     ),
+    // ignore: sized_box_for_whitespace
     Container(
       height: 300,
       width: 300,
@@ -112,8 +119,8 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
                   child: Container(
                     width: 7.0,
                     height: 7.0,
-                    margin:
-                        EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                    margin: const EdgeInsets.symmetric(
+                        vertical: 8.0, horizontal: 4.0),
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: (Theme.of(context).brightness == Brightness.dark
