@@ -10,7 +10,7 @@ class ubah extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Ubah Page Profile',
+          'Ubah Page Profil',
           style: TextStyle(
             fontFamily: 'PlusJakartaSans.bold',
             fontSize: 20,
@@ -26,7 +26,7 @@ class ubah extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              'Ubah Page Profile',
+              'Ubah Page Profil',
               style: TextStyle(
                 fontFamily: 'PlusJakartaSans',
                 fontSize: 40,
@@ -41,6 +41,7 @@ class ubah extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 10),
             Image.asset(
               'assets/icons/profil_page.png',
               width: 60,

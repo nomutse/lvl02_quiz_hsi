@@ -13,107 +13,25 @@ class HalamanEmpat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         //backgroundColor: const Color.fromARGB(255, 216, 229, 240),
-        toolbarHeight: 100,
-        elevation: 100,
+        toolbarHeight: 50,
+        elevation: 50,
         automaticallyImplyLeading: false,
-        title: Column(
-          children: [
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Profile',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  'V2402-2702',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 15,
-                  ),
-                ),
-              ],
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            Text(
+              'Profil ',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 50,
-                  width: 280,
-                  //color: Colors.green,
-                  child: Row(
-                    children: [
-                      Container(
-                        //color: Colors.pink,
-                        width: 50,
-                        height: 50,
-                        child: Image.asset(
-                          'assets/images/hsi.png',
-                          width: 20,
-                          height: 20,
-                        ),
-                      ),
-                      SizedBox(width: 15, height: 70),
-                      // ignore: avoid_unnecessary_containers
-                      Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
-                              'Retno Mutiara Stianingrum',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            Text(
-                              'ART181-31149',
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                fontSize: 15,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed(ubah.nameRoute);
-                  },
-                  child: Container(
-                    //width: 50,
-                    //height: 30,
-                    //color: Colors.amber,
-                    margin: EdgeInsets.symmetric(horizontal: 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset(
-                          'assets/icons/kertas_pensil.png',
-                          width: 20,
-                          height: 20,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          'Ubah',
-                          style: TextStyle(
-                            fontSize: 15,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+            Text(
+              'V2402-2702',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 15,
+              ),
             ),
           ],
         ),
@@ -124,6 +42,90 @@ class HalamanEmpat extends StatelessWidget {
             padding: const EdgeInsets.all(12.0),
             child: Row(
               children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 280,
+                      //color: Colors.green,
+                      child: Row(
+                        children: [
+                          Container(
+                            //color: Colors.pink,
+                            width: 50,
+                            height: 50,
+                            child: Image.asset(
+                              'assets/images/hsi.png',
+                              width: 20,
+                              height: 20,
+                            ),
+                          ),
+                          SizedBox(width: 5, height: 70),
+                          // ignore: avoid_unnecessary_containers
+                          Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Retno Mutiara Stianingrum',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'ART181-31149',
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 30),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(ubah.nameRoute);
+                      },
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              'assets/icons/kertas_pensil.png',
+                              width: 17,
+                              height: 17,
+                            ),
+                            SizedBox(width: 5),
+                            Text(
+                              'Ubah',
+                              style: TextStyle(
+                                fontSize: 13,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
+                // ignore: avoid_unnecessary_containers
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            child: Row(
+              children: [
                 // ignore: avoid_unnecessary_containers
                 Container(
                   child: Image.asset(
@@ -131,7 +133,7 @@ class HalamanEmpat extends StatelessWidget {
                     width: 20,
                     height: 30,
                     color: Color.fromARGB(255, 34, 67, 133),
-                    alignment: Alignment.center,
+                    //alignment: Alignment.center,
                   ),
                 ),
                 Container(
@@ -911,10 +913,11 @@ class HalamanEmpat extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 // ignore: deprecated_member_use
-                primary: Colors.white,
-                side: BorderSide(color: Color(0XFF213974)),
+                primary: const Color.fromRGBO(255, 255, 255, 1),
+                side: BorderSide(color: Colors.red),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
               onPressed: () {
                 Navigator.of(context).pushNamed(ubah.nameRoute);
@@ -925,7 +928,9 @@ class HalamanEmpat extends StatelessWidget {
                   Text(
                     'Keluar',
                     style: TextStyle(
-                        color: Color(0XFF586a97), fontWeight: FontWeight.bold),
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),

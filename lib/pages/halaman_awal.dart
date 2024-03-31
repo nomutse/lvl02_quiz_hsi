@@ -5,12 +5,17 @@ import 'package:lvl02_quiz_hsi/pages/halaman_dua.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
 import 'package:lvl02_quiz_hsi/pages/carousel.dart';
 
+import 'package:intl/intl.dart';
+
 class HalamanAwal extends StatelessWidget {
   const HalamanAwal({super.key});
   static const nameRoute = '/halamanawal';
 
   @override
   Widget build(BuildContext context) {
+    String datetime = DateFormat("EEE dd MMMM yyyy * HH:mm:ss")
+        .format(DateTime.now())
+        .toString();
     return Scaffold(
       appBar: AppBar(
           backgroundColor: const Color(0xFF233975),
@@ -98,8 +103,9 @@ class HalamanAwal extends StatelessWidget {
               ),
             ),
             Card(
-              borderOnForeground: true,
-              shadowColor: const Color.fromARGB(255, 0, 0, 0),
+              //borderOnForeground: true,
+              //shadowColor: const Color.fromARGB(255, 0, 0, 0),
+              color: Colors.white,
 
               //color: Color(0XFFf8f8f8),
               child: SizedBox(
@@ -206,7 +212,8 @@ class HalamanAwal extends StatelessWidget {
                                     ),
                                     SizedBox(width: 6),
                                     Text(
-                                      'Senin, 11 Mar 2024.20:00',
+                                      //'Senin, 11 Mar 2024.20:00',
+                                      datetime,
                                       style: TextStyle(
                                           color: Color(0XFF586a97),
                                           fontWeight: FontWeight.w400),

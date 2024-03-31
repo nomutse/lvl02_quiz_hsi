@@ -1,5 +1,9 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:flutter/material.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
+// ignore: implementation_imports
+import 'package:flutter/src/widgets/framework.dart';
 
 class HalamanDua extends StatelessWidget {
   const HalamanDua({super.key});
