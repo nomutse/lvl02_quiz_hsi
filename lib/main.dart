@@ -24,7 +24,7 @@ Future<void> main() async {
   await Hive.openBox('data_box');
   Hive.registerAdapter(MuridAdapter());
   var muridBox = await Hive.openBox('data_box');
-  await muridBox.put('anak1', {
+  await muridBox.put('murid1', {
     "id": 1,
     "name": "Leanne Graham",
     "username": "Bret",
@@ -34,11 +34,11 @@ Future<void> main() async {
     "address_zipcode": "92998-3874",
     "phone": "1-770-736-8031 x56442",
   });
-  final responseAnak1 = muridBox.get('anak1');
-  print(responseAnak1['id']);
-  final responseAnak1Name = print(responseAnak1['name']);
-  print(responseAnak1['username']);
-  print(muridBox.get('anak1')['phone']);
+  final responseMurid1 = muridBox.get('murid1');
+  print(responseMurid1['id']);
+  final responseMurid1Name = print(responseMurid1['name']);
+  print(responseMurid1['username']);
+  print(muridBox.get('murid1')['phone']);
 
   runApp(const MyApp());
 }

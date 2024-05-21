@@ -7,7 +7,7 @@ import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
 import 'package:lvl02_quiz_hsi/pages/carousel.dart';
 
 import 'package:intl/intl.dart';
-import 'package:lvl02_quiz_hsi/pages/home_page.dart';
+
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lvl02_quiz_hsi/main.dart';
@@ -74,7 +74,8 @@ class HalamanAwal extends StatelessWidget {
             const SizedBox(height: 7),
 
             const Text(
-              (responseAnak1Name),
+              //(responseMurid1Name)
+              'Retno Mutiara Setianingrum',
               style: TextStyle(
                 color: Color(0XFF393d41),
                 fontFamily: 'PlusJakartaSans',
