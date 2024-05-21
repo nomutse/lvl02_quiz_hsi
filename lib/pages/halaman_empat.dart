@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
 import 'package:lvl02_quiz_hsi/pages/ubah.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
+import 'package:dio/dio.dart';
 
 class HalamanEmpat extends StatelessWidget {
   const HalamanEmpat({super.key});
@@ -913,7 +914,7 @@ class HalamanEmpat extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 // ignore: deprecated_member_use
-                primary: const Color.fromRGBO(255, 255, 255, 1),
+                backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
                 side: BorderSide(color: Colors.red),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
