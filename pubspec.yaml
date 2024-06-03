@@ -48,6 +48,7 @@ dependencies:
   build_runner: ^2.4.9
   flutter_secure_storage: ^4.2.1
   provider: ^6.1.2
+  http: ^1.2.1
 
 
   #google_fonts: ^2.3.3

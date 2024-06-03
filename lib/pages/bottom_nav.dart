@@ -17,10 +17,12 @@ class _BottomNavigationExampleState extends State<BottomNavigationExample> {
   int _selectedTab = 0;
 
   final List _pages = [
-    const HalamanAwal(),
+    HalamanAwal(
+      id: '',
+    ),
     const HalamanDua(),
     const HalamanTiga(),
-    const HalamanEmpat(),
+    HalamanEmpat(),
   ];
 
   _changeTab(int index) {

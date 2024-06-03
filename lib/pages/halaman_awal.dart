@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:lvl02_quiz_hsi/api/user_model.dart';
 
 import 'package:lvl02_quiz_hsi/pages/halaman_dua.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
@@ -12,9 +13,28 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:lvl02_quiz_hsi/main.dart';
 
-class HalamanAwal extends StatelessWidget {
-  const HalamanAwal({super.key});
+class HalamanAwal extends StatefulWidget {
+  HalamanAwal({super.key, required this.id});
+  String id;
+
   static const nameRoute = '/halamanawal';
+
+  @override
+  State<HalamanAwal> createState() => _HalamanAwalState();
+}
+
+String output = '';
+
+class _HalamanAwalState extends State<HalamanAwal> {
+  void Out() {
+    (User.getUsers('5').then((users) {
+      output = '';
+      for (int i = 0; i < 10; i++) {
+        output = users[i].street;
+      }
+      setState(() {});
+    }));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +79,7 @@ class HalamanAwal extends StatelessWidget {
           ],
           automaticallyImplyLeading: false),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
         child: ListView(
           children: [
             const Text(
@@ -73,9 +93,10 @@ class HalamanAwal extends StatelessWidget {
             ),
             const SizedBox(height: 7),
 
-            const Text(
-              //(responseMurid1Name)
-              'Retno Mutiara Setianingrum',
+            Text(
+              output,
+
+              //'Retno Mutiara Setianingrum',
               style: TextStyle(
                 color: Color(0XFF393d41),
                 fontFamily: 'PlusJakartaSans',

@@ -12,6 +12,7 @@ import 'package:lvl02_quiz_hsi/pages/ubah.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as pathProvider;
+import 'package:lvl02_quiz_hsi/api/login.dart';
 
 Future<void> main() async {
   // initialize hive path and database
@@ -34,11 +35,11 @@ Future<void> main() async {
     "address_zipcode": "92998-3874",
     "phone": "1-770-736-8031 x56442",
   });
-  final responseMurid1 = muridBox.get('murid1');
+/*   final responseMurid1 = muridBox.get('murid1');
   print(responseMurid1['id']);
   final responseMurid1Name = print(responseMurid1['name']);
   print(responseMurid1['username']);
-  print(muridBox.get('murid1')['phone']);
+  print(muridBox.get('murid1')['phone']); */
 
   runApp(const MyApp());
 }
@@ -52,17 +53,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color: const Color(0XFFf8f8f8),
       debugShowCheckedModeBanner: false,
-      home: const HalamanAwal(),
-      initialRoute: BottomNavigationExample.nameRoute,
+      home: const Login(),
+      initialRoute: Login.nameRoute,
       routes: {
-        HalamanAwal.nameRoute: (context) => const HalamanAwal(),
+        HalamanAwal.nameRoute: (context) => HalamanAwal(
+              id: '5',
+            ),
         HalamanDua.nameRoute: (context) => const HalamanDua(),
         HalamanTiga.nameRoute: (context) => const HalamanTiga(),
-        HalamanEmpat.nameRoute: (context) => const HalamanEmpat(),
+        HalamanEmpat.nameRoute: (context) => HalamanEmpat(),
         //HomeScreen.nameRoute: (context) => const HomeScreen(),
         ubah.nameRoute: (context) => const ubah(),
         BottomNavigationExample.nameRoute: (context) =>
             const BottomNavigationExample(),
+        Login.nameRoute: (context) => const Login(),
       },
     );
   }

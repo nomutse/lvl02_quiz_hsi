@@ -1,14 +1,32 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, unused_import
 
 import 'package:flutter/material.dart';
+import 'package:lvl02_quiz_hsi/api/user_model.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_tiga.dart';
 import 'package:lvl02_quiz_hsi/pages/ubah.dart';
 import 'package:lvl02_quiz_hsi/pages/halaman_awal.dart';
 import 'package:dio/dio.dart';
 
-class HalamanEmpat extends StatelessWidget {
+class HalamanEmpat extends StatefulWidget {
   const HalamanEmpat({super.key});
   static const nameRoute = '/halamanempat';
+
+  @override
+  State<HalamanEmpat> createState() => _HalamanEmpatState();
+}
+
+class _HalamanEmpatState extends State<HalamanEmpat> {
+  String output = '';
+  void Out() {
+    (User.getUsers('5').then((users) {
+      output = '';
+      for (int i = 0; i < 10; i++) {
+        output = users[i].street;
+      }
+      setState(() {});
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,9 +86,9 @@ class HalamanEmpat extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
+                              children: <Widget>[
                                 Text(
-                                  'Retno Mutiara Stianingrum',
+                                  output,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 17,
@@ -78,7 +96,7 @@ class HalamanEmpat extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  'ART181-31149',
+                                  output,
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontSize: 15,
